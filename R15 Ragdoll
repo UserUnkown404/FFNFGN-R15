@@ -30,6 +30,7 @@ userInputService.InputBegan:Connect(function(input, gameProcessedEvent)
            game.Players.LocalPlayer.Character.LeftUpperArm["LeftShoulder"].Parent = game.ReplicatedStorage
            game.Players.LocalPlayer.Character.LeftLowerArm["LeftElbow"].Parent = game.ReplicatedStorage
            game.Players.LocalPlayer.Character.LeftHand["LeftWrist"].Parent = game.ReplicatedStorage
+           game.ReplicatedStorage.LeftWrist.Parent = game.Players.LocalPlayer.Character.LeftHand
            wait()
            game.Players.LocalPlayer.Character.Humanoid.Sit = true
            wait()
@@ -44,14 +45,7 @@ userInputService.InputBegan:Connect(function(input, gameProcessedEvent)
         end
         end)
 
-userInputService.InputBegan:Connect(function(input, gameProcessedEvent)
-    if gameProcessedEvent then return end
-    if input.UserInputType == Enum.UserInputType.Keyboard then
-        if input.KeyCode == Enum.KeyCode.T then
-game.ReplicatedStorage.LeftWrist.Parent = game.Players.LocalPlayer.Character.LeftHand
-        end
-        end
-end)
+
 
 userInputService.InputBegan:Connect(function(input, gameProcessedEvent)
     if gameProcessedEvent then return end
