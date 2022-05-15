@@ -33,13 +33,13 @@ userInputService.InputBegan:Connect(function(input, gameProcessedEvent)
            wait()
            game.Players.LocalPlayer.Character.Humanoid.Sit = true
            wait()
-           game.Players.LocalPlayer.Character["Left Arm"].Part.CanCollide = true
+           game.Players.LocalPlayer.Character["LeftLowerArm"].Part.CanCollide = true
            wait()
-           game.Players.LocalPlayer.Character["Right Arm"].Part.CanCollide = true
+           game.Players.LocalPlayer.Character["RightLowerArm"].Part.CanCollide = true
            wait()
-           game.Players.LocalPlayer.Character["Left Leg"].Part.CanCollide = true
+           game.Players.LocalPlayer.Character["LeftLowerLeg"].Part.CanCollide = true
            wait()
-           game.Players.LocalPlayer.Character["Right Leg"].Part.CanCollide = true
+           game.Players.LocalPlayer.Character["RightLowerLeg"].Part.CanCollide = true
         end
         end
         end)
