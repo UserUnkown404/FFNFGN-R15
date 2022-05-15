@@ -1,0 +1,230 @@
+	game.StarterGui:SetCore("SendNotification", {
+		Title = "Ragdoll"; -- the notification after waiting any second like wait(1)
+		Text = "Made by (MOJANGcreator091)"; 
+		Duration = 10;
+	})
+
+wait()
+	game.StarterGui:SetCore("SendNotification", {
+		Title = "Ragdoll"; -- the notification after waiting any second like wait(1)
+		Text = "Press 'R' to Ragdoll and 'T' to Get up"; 
+		Duration = 5;
+	})
+
+local userInputService = game:GetService("UserInputService")
+
+userInputService.InputBegan:Connect(function(input, gameProcessedEvent)
+    if gameProcessedEvent then return end
+    if input.UserInputType == Enum.UserInputType.Keyboard then
+        if input.KeyCode == Enum.KeyCode.R then
+           game.Players.LocalPlayer.Character.Humanoid:SetStateEnabled(Enum.HumanoidStateType.Jumping, false)
+           game.Players.LocalPlayer.Character.RightUpperLeg["RightHip"].Parent = game.ReplicatedStorage
+           game.Players.LocalPlayer.Character.RightLowerLeg["RightKnee"].Parent = game.ReplicatedStorage
+           game.Players.LocalPlayer.Character.RightFoot["RightAnkle"].Parent = game.ReplicatedStorage
+           game.Players.LocalPlayer.Character.LeftUpperLeg["LeftHip"].Parent = game.ReplicatedStorage
+           game.Players.LocalPlayer.Character.LeftLowerLeg["LeftKnee"].Parent = game.ReplicatedStorage
+           game.Players.LocalPlayer.Character.LeftFoot["LeftAnkle"].Parent = game.ReplicatedStorage
+           game.Players.LocalPlayer.Character.RightUpperArm["RightShoulder"].Parent = game.ReplicatedStorage
+           game.Players.LocalPlayer.Character.RightLowerArm["RightElbow"].Parent = game.ReplicatedStorage
+           game.Players.LocalPlayer.Character.RightHand["RightWrist"].Parent = game.ReplicatedStorage
+           game.Players.LocalPlayer.Character.LeftUpperArm["LeftShoulder"].Parent = game.ReplicatedStorage
+           game.Players.LocalPlayer.Character.LeftLowerArm["LeftElbow"].Parent = game.ReplicatedStorage
+           game.Players.LocalPlayer.Character.LeftHand["LeftWrist"].Parent = game.ReplicatedStorage
+           wait()
+           game.Players.LocalPlayer.Character.Humanoid.Sit = true
+           wait()
+           game.Players.LocalPlayer.Character["Left Arm"].Part.CanCollide = true
+           wait()
+           game.Players.LocalPlayer.Character["Right Arm"].Part.CanCollide = true
+           wait()
+           game.Players.LocalPlayer.Character["Left Leg"].Part.CanCollide = true
+           wait()
+           game.Players.LocalPlayer.Character["Right Leg"].Part.CanCollide = true
+        end
+        end
+        end)
+
+userInputService.InputBegan:Connect(function(input, gameProcessedEvent)
+    if gameProcessedEvent then return end
+    if input.UserInputType == Enum.UserInputType.Keyboard then
+        if input.KeyCode == Enum.KeyCode.T then
+game.ReplicatedStorage.LeftWrist.Parent = game.Players.LocalPlayer.Character.LeftHand
+        end
+        end
+end)
+
+userInputService.InputBegan:Connect(function(input, gameProcessedEvent)
+    if gameProcessedEvent then return end
+    if input.UserInputType == Enum.UserInputType.Keyboard then
+        if input.KeyCode == Enum.KeyCode.T then
+           game.ReplicatedStorage.RightHip.Parent = game.Players.LocalPlayer.Character.RightUpperLeg
+           game.ReplicatedStorage.RightKnee.Parent = game.Players.LocalPlayer.Character.RightLowerLeg
+           game.ReplicatedStorage.RightAnkle.Parent = game.Players.LocalPlayer.Character.RightFoot
+           game.ReplicatedStorage.LeftHip.Parent = game.Players.LocalPlayer.Character.LeftUpperLeg
+           game.ReplicatedStorage.LeftKnee.Parent = game.Players.LocalPlayer.Character.LeftLowerLeg
+           game.ReplicatedStorage.LeftAnkle.Parent = game.Players.LocalPlayer.Character.LeftFoot
+           game.ReplicatedStorage.RightShoulder.Parent = game.Players.LocalPlayer.Character.RightUpperArm
+           game.ReplicatedStorage.RightElbow.Parent = game.Players.LocalPlayer.Character.RightLowerArm
+           game.ReplicatedStorage.RightWrist.Parent = game.Players.LocalPlayer.Character.RightHand
+           game.ReplicatedStorage.LeftShoulder.Parent = game.Players.LocalPlayer.Character.LeftUpperArm
+           game.ReplicatedStorage.LeftElbow.Parent = game.Players.LocalPlayer.Character.LeftLowerArm
+           game.Players.LocalPlayer.Character.Humanoid:SetStateEnabled(Enum.HumanoidStateType.Jumping, true)
+           wait()
+           game.Players.LocalPlayer.Character.Humanoid.Sit = false
+           wait()
+           game.Players.LocalPlayer.Character["LeftLowerArm"].Part.CanCollide = false
+           wait()
+           game.Players.LocalPlayer.Character["RightLowerArm"].Part.CanCollide = false
+           wait()
+           game.Players.LocalPlayer.Character["LeftLowerLeg"].Part.CanCollide = false
+           wait()
+           game.Players.LocalPlayer.Character["RightLowerLeg"].Part.CanCollide = false
+        end
+        end
+end)
+
+local part = Instance.new("Part", game.Players.LocalPlayer.Character)
+part.Transparency = 1
+part.Size = Vector3.new(1, 1, 1)
+part.CanCollide = true
+local w1 = Instance.new("Weld", part)
+w1.Part0 = game.Players.LocalPlayer.Character["LeftLowerArm"]
+w1.Part1 = part
+w1.C1 = CFrame.new(0,0,0)
+wait(0.1)
+game.Players.LocalPlayer.Character.Part.Parent = game.Players.LocalPlayer.Character["LeftLowerArm"]
+wait()
+local part = Instance.new("Part", game.Players.LocalPlayer.Character)
+part.Transparency = 1
+part.Size = Vector3.new(1, 1, 1)
+part.CanCollide = true
+local w1 = Instance.new("Weld", part)
+w1.Part0 = game.Players.LocalPlayer.Character["RightLowerArm"]
+w1.Part1 = part
+w1.C1 = CFrame.new(0,0,0)
+wait(0.1)
+game.Players.LocalPlayer.Character.Part.Parent = game.Players.LocalPlayer.Character["RightLowerArm"]
+wait()
+local part = Instance.new("Part", game.Players.LocalPlayer.Character)
+part.Transparency = 1
+part.Size = Vector3.new(1, 1, 1)
+part.CanCollide = true
+local w1 = Instance.new("Weld", part)
+w1.Part0 = game.Players.LocalPlayer.Character["LeftLowerLeg"]
+w1.Part1 = part
+w1.C1 = CFrame.new(0,0,0)
+wait(0.1)
+game.Players.LocalPlayer.Character.Part.Parent = game.Players.LocalPlayer.Character["LeftLowerLeg"]
+wait()
+local part = Instance.new("Part", game.Players.LocalPlayer.Character)
+part.Transparency = 1
+part.Size = Vector3.new(1, 1, 1)
+part.CanCollide = true
+local w1 = Instance.new("Weld", part)
+w1.Part0 = game.Players.LocalPlayer.Character["RightLowerLeg"]
+w1.Part1 = part
+w1.C1 = CFrame.new(0,0,0)
+wait(0.1)
+game.Players.LocalPlayer.Character.Part.Parent = game.Players.LocalPlayer.Character["RightLowerLeg"]
+
+LocalPlayer = game:GetService("Players").LocalPlayer
+function Iterate(instance, func)
+for i, v in next, instance:GetChildren() do
+func(v)
+end
+end
+limbs = {
+["RightUpperArm"] = true;
+["RightLowerArm"] = true;
+["RightHand"] = true;
+["RightUpperLeg"] = true;
+["RightLowerLeg"] = true;
+["RightFoot"] = true;
+["LeftUpperLeg"] = true;
+["LeftLowerLeg"] = true;
+["LeftFoot"] = true;
+["LeftUpperArm"] = true;
+["LeftLowerArm"] = true;
+["LeftHand"] = true;
+}
+Iterate(LocalPlayer.Character, function(v)
+if v:IsA("BasePart") then
+local attachment = Instance.new("Attachment")
+attachment.Parent = v
+attachment.Name = (v.Name .. "[Attachment]")
+if limbs[v.Name] then
+attachment.Position = Vector3.new(0, v.Size.Y/2, 0)
+elseif v.Name == "Head" then
+attachment.Position = Vector3.new(0, -v.Size.Y/2, 0)
+attachment.Rotation = Vector3.new(0, 0, -90)
+end
+end
+end)
+local leftLegAttachment = Instance.new("Attachment")
+leftLegAttachment.Position = Vector3.new(-.5, -1, 0)
+leftLegAttachment.Rotation = Vector3.new(0, -90, 0)
+local rightLegAttachment = Instance.new("Attachment")
+rightLegAttachment.Position = Vector3.new(0.5, 5, 0)
+rightLegAttachment.Rotation = Vector3.new(0, -90, 0)
+rightLegAttachment.Parent, leftLegAttachment.Parent = LocalPlayer.Character.UpperTorso, LocalPlayer.Character.UpperTorso
+jointAttachments = {
+['LeftUpperArm'] = {
+['Attachment0'] = LocalPlayer.Character.UpperTorso['LeftCollarAttachment'];
+['Attachment1'] = LocalPlayer.Character['LeftUpperArm']['LeftUpperArm[Attachment]'];
+};
+['LeftLowerArm'] = {
+['Attachment0'] = LocalPlayer.Character.LeftUpperArm['LeftElbowRigAttachment'];
+['Attachment1'] = LocalPlayer.Character['LeftLowerArm']['LeftLowerArm[Attachment]'];
+};
+['LeftHand'] = {
+['Attachment0'] = LocalPlayer.Character.LeftLowerArm['LeftWristRigAttachment'];
+['Attachment1'] = LocalPlayer.Character['LeftHand']['LeftHand[Attachment]'];
+};
+['RightUpperArm'] = {
+['Attachment0'] = LocalPlayer.Character.UpperTorso['RightCollarAttachment'];
+['Attachment1'] = LocalPlayer.Character['RightUpperArm']['RightUpperArm[Attachment]'];
+};
+['RightLowerArm'] = {
+['Attachment0'] = LocalPlayer.Character.RightUpperArm['RightElbowRigAttachment'];
+['Attachment1'] = LocalPlayer.Character['RightLowerArm']['RightLowerArm[Attachment]'];
+};
+['RightHand'] = {
+['Attachment0'] = LocalPlayer.Character.RightLowerArm['RightWristRigAttachment'];
+['Attachment1'] = LocalPlayer.Character['RightHand']['RightHand[Attachment]'];
+};
+['LeftUpperLeg'] = {
+['Attachment0'] = LocalPlayer.Character.LowerTorso['LeftHipRigAttachment'];
+['Attachment1'] = LocalPlayer.Character['LeftUpperLeg']['LeftUpperLeg[Attachment]'];
+};
+['LeftLowerLeg'] = {
+['Attachment0'] = LocalPlayer.Character.LeftUpperLeg['LeftKneeRigAttachment'];
+['Attachment1'] = LocalPlayer.Character['LeftLowerLeg']['LeftLowerLeg[Attachment]'];
+};
+['LeftFoot'] = {
+['Attachment0'] = LocalPlayer.Character.LeftLowerLeg['LeftAnkleRigAttachment'];
+['Attachment1'] = LocalPlayer.Character['LeftFoot']['LeftFoot[Attachment]'];
+};
+['RightUpperLeg'] = {
+['Attachment0'] = LocalPlayer.Character.LowerTorso['RightHipRigAttachment'];
+['Attachment1'] = LocalPlayer.Character['RightUpperLeg']['RightUpperLeg[Attachment]'];
+};
+['RightLowerLeg'] = {
+['Attachment0'] = LocalPlayer.Character.RightUpperLeg['RightKneeRigAttachment'];
+['Attachment1'] = LocalPlayer.Character['RightLowerLeg']['RightLowerLeg[Attachment]'];
+};
+['RightFoot'] = {
+['Attachment0'] = LocalPlayer.Character.RightLowerLeg['RightAnkleRigAttachment'];
+['Attachment1'] = LocalPlayer.Character['RightFoot']['RightFoot[Attachment]'];
+};
+}
+LocalPlayer.Character.Humanoid.PlatformStand = true
+Iterate(LocalPlayer.Character, function(v)
+if v:IsA("BasePart") then
+if jointAttachments[v.Name] then
+local ballSocketJoint = Instance.new("BallSocketConstraint")
+ballSocketJoint.Parent = v
+ballSocketJoint.Radius = 0.15
+ballSocketJoint.Attachment0, ballSocketJoint.Attachment1 = jointAttachments[v.Name]['Attachment0'], jointAttachments[v.Name]['Attachment1']
+end
+end
+end)
