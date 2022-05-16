@@ -36,11 +36,19 @@ userInputService.InputBegan:Connect(function(input, gameProcessedEvent)
            wait()
            game.Players.LocalPlayer.Character["LeftLowerArm"].Part.CanCollide = true
            wait()
+           game.Players.LocalPlayer.Character["LeftUpperArm"].Part.CanCollide = true
+           wait()
            game.Players.LocalPlayer.Character["RightLowerArm"].Part.CanCollide = true
+           wait()
+           game.Players.LocalPlayer.Character["RightUpperArm"].Part.CanCollide = true
            wait()
            game.Players.LocalPlayer.Character["LeftLowerLeg"].Part.CanCollide = true
            wait()
+           game.Players.LocalPlayer.Character["LeftUpperLeg"].Part.CanCollide = true
+           wait()
            game.Players.LocalPlayer.Character["RightLowerLeg"].Part.CanCollide = true
+           wait()
+           game.Players.LocalPlayer.Character["RightUpperLeg"].Part.CanCollide = true
         end
         end
         end)
@@ -65,14 +73,22 @@ userInputService.InputBegan:Connect(function(input, gameProcessedEvent)
            game.Players.LocalPlayer.Character.Humanoid:SetStateEnabled(Enum.HumanoidStateType.Jumping, true)
            wait()
            game.Players.LocalPlayer.Character.Humanoid.Sit = false
-           wait()
+	   wait()
            game.Players.LocalPlayer.Character["LeftLowerArm"].Part.CanCollide = false
+           wait()
+           game.Players.LocalPlayer.Character["LeftUpperArm"].Part.CanCollide = false
            wait()
            game.Players.LocalPlayer.Character["RightLowerArm"].Part.CanCollide = false
            wait()
+           game.Players.LocalPlayer.Character["RightUpperArm"].Part.CanCollide = false
+           wait()
            game.Players.LocalPlayer.Character["LeftLowerLeg"].Part.CanCollide = false
            wait()
+           game.Players.LocalPlayer.Character["LeftUpperLeg"].Part.CanCollide = false
+           wait()
            game.Players.LocalPlayer.Character["RightLowerLeg"].Part.CanCollide = false
+           wait()
+           game.Players.LocalPlayer.Character["RightUpperLeg"].Part.CanCollide = false
         end
         end
 end)
@@ -93,11 +109,33 @@ part.Transparency = 1
 part.Size = Vector3.new(1, 1, 1)
 part.CanCollide = true
 local w1 = Instance.new("Weld", part)
+w1.Part0 = game.Players.LocalPlayer.Character["LeftUpperArm"]
+w1.Part1 = part
+w1.C1 = CFrame.new(0,0,0)
+wait(0.1)
+game.Players.LocalPlayer.Character.Part.Parent = game.Players.LocalPlayer.Character["LeftUpperArm"]
+wait()
+local part = Instance.new("Part", game.Players.LocalPlayer.Character)
+part.Transparency = 1
+part.Size = Vector3.new(1, 1, 1)
+part.CanCollide = true
+local w1 = Instance.new("Weld", part)
 w1.Part0 = game.Players.LocalPlayer.Character["RightLowerArm"]
 w1.Part1 = part
 w1.C1 = CFrame.new(0,0,0)
 wait(0.1)
 game.Players.LocalPlayer.Character.Part.Parent = game.Players.LocalPlayer.Character["RightLowerArm"]
+wait()
+local part = Instance.new("Part", game.Players.LocalPlayer.Character)
+part.Transparency = 1
+part.Size = Vector3.new(1, 1, 1)
+part.CanCollide = true
+local w1 = Instance.new("Weld", part)
+w1.Part0 = game.Players.LocalPlayer.Character["RightUpperArm"]
+w1.Part1 = part
+w1.C1 = CFrame.new(0,0,0)
+wait(0.1)
+game.Players.LocalPlayer.Character.Part.Parent = game.Players.LocalPlayer.Character["RightUpperArm"]
 wait()
 local part = Instance.new("Part", game.Players.LocalPlayer.Character)
 part.Transparency = 1
@@ -115,11 +153,33 @@ part.Transparency = 1
 part.Size = Vector3.new(1, 1, 1)
 part.CanCollide = true
 local w1 = Instance.new("Weld", part)
+w1.Part0 = game.Players.LocalPlayer.Character["LeftUpperLeg"]
+w1.Part1 = part
+w1.C1 = CFrame.new(0,0,0)
+wait(0.1)
+game.Players.LocalPlayer.Character.Part.Parent = game.Players.LocalPlayer.Character["LeftUpperLeg"]
+wait()
+local part = Instance.new("Part", game.Players.LocalPlayer.Character)
+part.Transparency = 1
+part.Size = Vector3.new(1, 1, 1)
+part.CanCollide = true
+local w1 = Instance.new("Weld", part)
 w1.Part0 = game.Players.LocalPlayer.Character["RightLowerLeg"]
 w1.Part1 = part
 w1.C1 = CFrame.new(0,0,0)
 wait(0.1)
 game.Players.LocalPlayer.Character.Part.Parent = game.Players.LocalPlayer.Character["RightLowerLeg"]
+wait()
+local part = Instance.new("Part", game.Players.LocalPlayer.Character)
+part.Transparency = 1
+part.Size = Vector3.new(1, 1, 1)
+part.CanCollide = true
+local w1 = Instance.new("Weld", part)
+w1.Part0 = game.Players.LocalPlayer.Character["RightUpperLeg"]
+w1.Part1 = part
+w1.C1 = CFrame.new(0,0,0)
+wait(0.1)
+game.Players.LocalPlayer.Character.Part.Parent = game.Players.LocalPlayer.Character["RightUpperLeg"]
 
 LocalPlayer = game:GetService("Players").LocalPlayer
 function Iterate(instance, func)
