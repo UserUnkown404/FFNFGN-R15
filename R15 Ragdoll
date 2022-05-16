@@ -95,7 +95,7 @@ end)
 
 local part = Instance.new("Part", game.Players.LocalPlayer.Character)
 part.Transparency = 1
-part.Size = Vector3.new(1, 1, 1)
+part.Size = Vector3.new(1, 0, 1)
 part.CanCollide = true
 local w1 = Instance.new("Weld", part)
 w1.Part0 = game.Players.LocalPlayer.Character["LeftLowerArm"]
@@ -106,7 +106,7 @@ game.Players.LocalPlayer.Character.Part.Parent = game.Players.LocalPlayer.Charac
 wait()
 local part = Instance.new("Part", game.Players.LocalPlayer.Character)
 part.Transparency = 1
-part.Size = Vector3.new(1, 1, 1)
+part.Size = Vector3.new(1, 0, 1)
 part.CanCollide = true
 local w1 = Instance.new("Weld", part)
 w1.Part0 = game.Players.LocalPlayer.Character["LeftUpperArm"]
@@ -117,7 +117,7 @@ game.Players.LocalPlayer.Character.Part.Parent = game.Players.LocalPlayer.Charac
 wait()
 local part = Instance.new("Part", game.Players.LocalPlayer.Character)
 part.Transparency = 1
-part.Size = Vector3.new(1, 1, 1)
+part.Size = Vector3.new(1, 0, 1)
 part.CanCollide = true
 local w1 = Instance.new("Weld", part)
 w1.Part0 = game.Players.LocalPlayer.Character["RightLowerArm"]
@@ -128,7 +128,7 @@ game.Players.LocalPlayer.Character.Part.Parent = game.Players.LocalPlayer.Charac
 wait()
 local part = Instance.new("Part", game.Players.LocalPlayer.Character)
 part.Transparency = 1
-part.Size = Vector3.new(1, 1, 1)
+part.Size = Vector3.new(1, 0, 1)
 part.CanCollide = true
 local w1 = Instance.new("Weld", part)
 w1.Part0 = game.Players.LocalPlayer.Character["RightUpperArm"]
@@ -139,7 +139,7 @@ game.Players.LocalPlayer.Character.Part.Parent = game.Players.LocalPlayer.Charac
 wait()
 local part = Instance.new("Part", game.Players.LocalPlayer.Character)
 part.Transparency = 1
-part.Size = Vector3.new(1, 1, 1)
+part.Size = Vector3.new(1, 0, 1)
 part.CanCollide = true
 local w1 = Instance.new("Weld", part)
 w1.Part0 = game.Players.LocalPlayer.Character["LeftLowerLeg"]
@@ -150,7 +150,7 @@ game.Players.LocalPlayer.Character.Part.Parent = game.Players.LocalPlayer.Charac
 wait()
 local part = Instance.new("Part", game.Players.LocalPlayer.Character)
 part.Transparency = 1
-part.Size = Vector3.new(1, 1, 1)
+part.Size = Vector3.new(1, 0, 1)
 part.CanCollide = true
 local w1 = Instance.new("Weld", part)
 w1.Part0 = game.Players.LocalPlayer.Character["LeftUpperLeg"]
@@ -161,7 +161,7 @@ game.Players.LocalPlayer.Character.Part.Parent = game.Players.LocalPlayer.Charac
 wait()
 local part = Instance.new("Part", game.Players.LocalPlayer.Character)
 part.Transparency = 1
-part.Size = Vector3.new(1, 1, 1)
+part.Size = Vector3.new(1, 0, 1)
 part.CanCollide = true
 local w1 = Instance.new("Weld", part)
 w1.Part0 = game.Players.LocalPlayer.Character["RightLowerLeg"]
@@ -172,7 +172,7 @@ game.Players.LocalPlayer.Character.Part.Parent = game.Players.LocalPlayer.Charac
 wait()
 local part = Instance.new("Part", game.Players.LocalPlayer.Character)
 part.Transparency = 1
-part.Size = Vector3.new(1, 1, 1)
+part.Size = Vector3.new(1, 0, 1)
 part.CanCollide = true
 local w1 = Instance.new("Weld", part)
 w1.Part0 = game.Players.LocalPlayer.Character["RightUpperLeg"]
